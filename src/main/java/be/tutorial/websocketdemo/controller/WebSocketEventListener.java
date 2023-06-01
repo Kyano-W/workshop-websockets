@@ -17,11 +17,6 @@ public class WebSocketEventListener {
     private SimpMessageSendingOperations sendingOperations;
 
     @EventListener
-    public void handleWebsocketConnectListener(final SessionConnectedEvent event) {
-
-    }
-
-    @EventListener
     public void handleWebsocketDisconnectListener(final SessionDisconnectEvent event) {
         final StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(event.getMessage());
 
